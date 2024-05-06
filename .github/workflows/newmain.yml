@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: Amazon Linux (Inferred)
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v1
