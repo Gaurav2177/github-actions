@@ -1,0 +1,20 @@
+make iam user and attach s3 full access. make s3 bucket.
+make a git repo. configure ssh. make an index.html file and add to github using the commands. 
+then in actions, attach the access and secret keys repo.
+create a workflow and attach the (uploading site) code.
+deploy it.
+then in s3 host the site in static website hosting by making acl enabled. 
+you can also attach a policy:-
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::s3bucket-githubactions/*"
+        }
+    ]
+}
